@@ -1,5 +1,6 @@
 <template >
   <div id="home">
+    <van-notice-bar text="The cloud platform for music creation, collaboration and sharing. Create fearlessly with Splice" left-icon="volume-o"/>
     <mt-swipe :auto="4000">
       <mt-swipe-item v-for="image in imageList" :key="image.id">
         <img :src="image.url" alt>
@@ -64,20 +65,9 @@ export default {
         { id: "1", url: require("../assets/images/image1.jpeg") },
         { id: "2", url: require("../assets/images/image2.jpg") },
         { id: "3", url: require("../assets/images/image3.jpg") }
-      ]
+      ],
+      newsList: []
     };
-  },
-  created() {
-    this.getDataList();
-  },
-  methods: {
-    getDataList() {
-      // this.$http.get("http://vue.studyit.io/api/getlunbo").then(
-      //   result => {
-      //     console.log(result.body);
-      //   }
-      // )
-    }
   }
 };
 </script>

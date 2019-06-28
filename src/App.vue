@@ -17,14 +17,14 @@
         <span class="mui-tab-label">首页</span>
       </router-link>
       <router-link class="mui-tab-item" to="/order">
-        <span class="mui-icon mui-icon-email">
-          <span class="mui-badge">0</span>
-        </span>
-        <span class="mui-tab-label">订单</span>
+        <span class="mui-icon mui-icon-compose"></span>
+        <span class="mui-tab-label">历史上的今天</span>
       </router-link>
       <router-link class="mui-tab-item" to="/find">
-        <span class="mui-icon mui-icon-pengyouquan"></span>
-        <span class="mui-tab-label">咨询</span>
+        <span class="mui-icon mui-icon-pengyouquan">
+          <span class="mui-badge">30</span>
+        </span>
+        <span class="mui-tab-label">头条</span>
       </router-link>
       <router-link class="mui-tab-item" to="/my">
         <span class="mui-icon mui-icon-contact"></span>
@@ -64,7 +64,7 @@ html {
   opacity: 0;
   transform: translateX(100%);
 }
-.v-leave-to{
+.v-leave-to {
   opacity: 0;
   transform: translateX(-100%);
   position: absolute;

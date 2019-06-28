@@ -10,7 +10,22 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/api':{
+        target: "http://v.juhe.cn/toutiao",
+        changeOrigin:true,//这是跨域重点
+        pathRewrite: {
+          '^/api': ''
+        }
+      },
+      '/toh':{
+        target: "http://api.juheapi.com/japi/toh",
+        changeOrigin:true,
+        pathRewrite: {
+          '^/toh': ''
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
